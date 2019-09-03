@@ -15,9 +15,9 @@ $color-5: rgba(216,135,101, 1);
 
 .wrap {
     background-color:$color-0;
+    height:100vh;
     .Header {
         position:relative;
-
         .navBarbot {
             width: 100%;
             display: flex;
@@ -25,7 +25,7 @@ $color-5: rgba(216,135,101, 1);
             align-items: center;
             button.navbar-toggler {
                 position: absolute;
-                top: 22vw;
+                top: 18vw;
                 right: 2.5em;
                 border-radius: 3em;
                 padding:0em;
@@ -42,13 +42,13 @@ $color-5: rgba(216,135,101, 1);
                 text-align: right;
                 background-color: #343a40;
                 padding: 2em;
-                top: 13em;
+                top: 10.5em;
+                z-index: 999;
             }
         }
         .navbar-dark .navbar-toggler-icon {
             background-image:url("../src/profile-user.svg");
             font-size:1.75em;
-            fill:chocolate;
         }
         .mb-3 {
             Button {
@@ -60,15 +60,15 @@ $color-5: rgba(216,135,101, 1);
             }
             .searchBar {
                 border-radius: 2em 0em 0em 2em;
-                height: 3em;
+                height: 2.3em;
             }
         }
         .Logo {
-            padding-top: 1em;
-            padding-bottom: 1em;
+            padding-top: .5em;
+            padding-bottom: .5em;
+            width: 19em;
         }
         .Navbar {
-            position:fixed;
             display:flex;
             width:100vw;
             // justify-content: space-around;
@@ -81,44 +81,91 @@ $color-5: rgba(216,135,101, 1);
         }
     }
 }
-.login {
-    height: 100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content: space-around;
+.section {
+    display: flex;
+    flex-direction: column;
+    height: 65%;
+    justify-content: space-between;
+    .catagories {
+        
+        .nav.nav-pills {
+            justify-content: center ;
+           padding-top: 1em;
+            .nav-link {
+                color: $color-1;
+            }
+            .nav-link.active {
+                color: #fff;
+                background-color: $color-1;
+            }
+        }
+    }
+    .items {
+        display: flex;
+        flex-direction: column;
+        overflow: scroll;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1 0 70%;
+        .card {
+            border-radius:2em;
+            box-shadow:0em .1em .2em 0em rgba(51, 51, 51, 0.247);
+            margin:.2em;
+            width:100%;
+            .btn-primary {
+                background-color:$color-1;
+                width:100%;
+                border-radius: 2em;
+            }
+        }
+    }
 
-    .accordion>.card {
+    .FilterCat {
+        background-color:$color-4;
+        color:$color-1;
+        text-align: center;
+        cursor: pointer;
+        margin-bottom: .5em;
+        .card {
+            background: white;
+        }
+        .card-header {
+            padding: 0;
+            background-color: #cab166;
+            border:0;
+            padding: .3em;
+        }
+    
+    }
+
+    .LoginButton {
         background-color:$color-1;
         color:$color-5;
         border-radius: 3em;
         margin:2em;
+        margin-top:1.5em;
         text-align: center;
+        padding: 1em;
+        cursor: pointer;
     }
+
+    
+
     .container {
-        height: 100vh;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
     }
-    .loginForm {
+
+    .LoginGrp { 
         display:flex;
         flex-direction: column;
         justify-content: flex-end;
-        .form-group {
-            h3 {
-                padding-left:.5em;
-            }
-            margin-bottom: 0em;
+        .LoginModal {
+            background:$color-5;
         }
-        button {
-            background-color:$color-5;
-        }
-        input {
-            background-color: #ffffff;
-            height: 3em;
-            border-top: thin black;
-            border-radius: 0;
-            border-right: 0;
-            border-left: 0;
-        }
-    }
+}
+
 }
 
 
@@ -134,6 +181,15 @@ $color-5: rgba(216,135,101, 1);
     border-radius: 3em;
     height: 2.7em;
     } 
+
+    .section .items {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        justify-content: flex-start;
+        align-items: center;
+        flex: 1 0 70%;
+    }
 }
 
 // // Medium devices (tablets, 768px and up)
@@ -151,6 +207,16 @@ $color-5: rgba(216,135,101, 1);
     }        
     .wrap .Header .navBarbot {
         width: 25em;
+    }
+
+    .wrap .Header .navBarbot div#responsive-navbar-nav {
+        position: absolute;
+        right: 0;
+        text-align: right;
+        background-color: #343a40;
+        padding: 1em;
+        top: 10em;
+        z-index: 999;
     }
 }
 // // Extra large devices (large desktops, 1200px and up)

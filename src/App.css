@@ -4,6 +4,7 @@
 /* Color Theme Swatches in RGBA */
 .wrap {
   background-color: #d6d8d8;
+  height: 100vh;
 }
 
 .wrap .Header {
@@ -25,7 +26,7 @@
 
 .wrap .Header .navBarbot button.navbar-toggler {
   position: absolute;
-  top: 22vw;
+  top: 18vw;
   right: 2.5em;
   border-radius: 3em;
   padding: 0em;
@@ -43,13 +44,13 @@
   text-align: right;
   background-color: #343a40;
   padding: 2em;
-  top: 13em;
+  top: 10.5em;
+  z-index: 999;
 }
 
 .wrap .Header .navbar-dark .navbar-toggler-icon {
   background-image: url("../src/profile-user.svg");
   font-size: 1.75em;
-  fill: chocolate;
 }
 
 .wrap .Header .mb-3 Button {
@@ -63,16 +64,16 @@
 
 .wrap .Header .mb-3 .searchBar {
   border-radius: 2em 0em 0em 2em;
-  height: 3em;
+  height: 2.3em;
 }
 
 .wrap .Header .Logo {
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding-top: .5em;
+  padding-bottom: .5em;
+  width: 19em;
 }
 
 .wrap .Header .Navbar {
-  position: fixed;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -88,8 +89,7 @@
   padding: 1em;
 }
 
-.login {
-  height: 100vh;
+.section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,23 +97,106 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  height: 65%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.login .accordion > .card {
+.section .catagories .nav.nav-pills {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-top: 1em;
+}
+
+.section .catagories .nav.nav-pills .nav-link {
+  color: #343a40;
+}
+
+.section .catagories .nav.nav-pills .nav-link.active {
+  color: #fff;
+  background-color: #343a40;
+}
+
+.section .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow: scroll;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 70%;
+          flex: 1 0 70%;
+}
+
+.section .items .card {
+  border-radius: 2em;
+  -webkit-box-shadow: 0em 0.1em 0.2em 0em rgba(51, 51, 51, 0.247);
+          box-shadow: 0em 0.1em 0.2em 0em rgba(51, 51, 51, 0.247);
+  margin: .2em;
+  width: 100%;
+}
+
+.section .items .card .btn-primary {
+  background-color: #343a40;
+  width: 100%;
+  border-radius: 2em;
+}
+
+.section .FilterCat {
+  background-color: #cab166;
+  color: #343a40;
+  text-align: center;
+  cursor: pointer;
+  margin-bottom: .5em;
+}
+
+.section .FilterCat .card {
+  background: white;
+}
+
+.section .FilterCat .card-header {
+  padding: 0;
+  background-color: #cab166;
+  border: 0;
+  padding: .3em;
+}
+
+.section .LoginButton {
   background-color: #343a40;
   color: #d88765;
   border-radius: 3em;
   margin: 2em;
+  margin-top: 1.5em;
   text-align: center;
+  padding: 1em;
+  cursor: pointer;
 }
 
-.login .container {
-  height: 100vh;
+.section .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.login .loginForm {
+.section .LoginGrp {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -126,25 +209,8 @@
           justify-content: flex-end;
 }
 
-.login .loginForm .form-group {
-  margin-bottom: 0em;
-}
-
-.login .loginForm .form-group h3 {
-  padding-left: .5em;
-}
-
-.login .loginForm button {
-  background-color: #d88765;
-}
-
-.login .loginForm input {
-  background-color: #ffffff;
-  height: 3em;
-  border-top: thin black;
-  border-radius: 0;
-  border-right: 0;
-  border-left: 0;
+.section .LoginGrp .LoginModal {
+  background: #d88765;
 }
 
 @media (min-width: 576px) {
@@ -154,6 +220,25 @@
     right: 2em;
     border-radius: 3em;
     height: 2.7em;
+  }
+  .section .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    overflow: scroll;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 70%;
+            flex: 1 0 70%;
   }
 }
 
@@ -173,6 +258,15 @@
   }
   .wrap .Header .navBarbot {
     width: 25em;
+  }
+  .wrap .Header .navBarbot div#responsive-navbar-nav {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    background-color: #343a40;
+    padding: 1em;
+    top: 10em;
+    z-index: 999;
   }
 }
 /*# sourceMappingURL=App.css.map */
