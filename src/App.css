@@ -1,0 +1,178 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css");
+/* Color Theme Swatches in RGBA */
+.wrap {
+  background-color: #d6d8d8;
+}
+
+.wrap .Header {
+  position: relative;
+}
+
+.wrap .Header .navBarbot {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrap .Header .navBarbot button.navbar-toggler {
+  position: absolute;
+  top: 22vw;
+  right: 2.5em;
+  border-radius: 3em;
+  padding: 0em;
+  font-size: .9em;
+  opacity: .7;
+}
+
+.wrap .Header .navBarbot button.navbar-toggler:hover {
+  opacity: 1;
+}
+
+.wrap .Header .navBarbot div#responsive-navbar-nav {
+  position: absolute;
+  right: 0;
+  text-align: right;
+  background-color: #343a40;
+  padding: 2em;
+  top: 13em;
+}
+
+.wrap .Header .navbar-dark .navbar-toggler-icon {
+  background-image: url("../src/profile-user.svg");
+  font-size: 1.75em;
+  fill: chocolate;
+}
+
+.wrap .Header .mb-3 Button {
+  border-radius: 0em 2em 2em 0em;
+}
+
+.wrap .Header .mb-3 Button i {
+  font-size: 1em;
+  padding: .2em;
+}
+
+.wrap .Header .mb-3 .searchBar {
+  border-radius: 2em 0em 0em 2em;
+  height: 3em;
+}
+
+.wrap .Header .Logo {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.wrap .Header .Navbar {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100vw;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.wrap .Header .Navbar .navbar-brand {
+  padding: 1em;
+}
+
+.login {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.login .accordion > .card {
+  background-color: #343a40;
+  color: #d88765;
+  border-radius: 3em;
+  margin: 2em;
+  text-align: center;
+}
+
+.login .container {
+  height: 100vh;
+}
+
+.login .loginForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.login .loginForm .form-group {
+  margin-bottom: 0em;
+}
+
+.login .loginForm .form-group h3 {
+  padding-left: .5em;
+}
+
+.login .loginForm button {
+  background-color: #d88765;
+}
+
+.login .loginForm input {
+  background-color: #ffffff;
+  height: 3em;
+  border-top: thin black;
+  border-radius: 0;
+  border-right: 0;
+  border-left: 0;
+}
+
+@media (min-width: 576px) {
+  .navBarbot button.navbar-toggler {
+    position: absolute;
+    top: 6em !important;
+    right: 2em;
+    border-radius: 3em;
+    height: 2.7em;
+  }
+}
+
+@media (min-width: 768px) {
+  .wrap .Header .navBarbot {
+    width: 80%;
+  }
+}
+
+@media (min-width: 992px) {
+  .wrap .Header .Navbar {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrap .Header .navBarbot {
+    width: 25em;
+  }
+}
+/*# sourceMappingURL=App.css.map */
