@@ -33,9 +33,10 @@ render() {
       <div className="Header">
 
         <Navbar className="Navbar" collapseOnSelect expand="lg" bg="dark" variant="dark">
-        <Image className="Logo" src="" fluid />
+        <Image className="Logo" src={require('./logo.png')} fluid />
         
         <div className="navBarbot">
+
         <InputGroup className="searchBar">
         <InputGroup.Append>
           <Button variant="outline-secondary"><i class="fas fa-search"></i></Button>
@@ -48,6 +49,7 @@ render() {
 
       </InputGroup>
           <Navbar.Toggle className="userControl" aria-controls="responsive-navbar-nav" />
+          
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
               <Nav.Link href="#sell">+ Sell an Item</Nav.Link>
@@ -56,6 +58,7 @@ render() {
               <Nav.Link href="#reviews">My Reviews</Nav.Link>
             </Nav>
           </Navbar.Collapse>
+          
           </div>
         </Navbar>
         </div>
@@ -118,8 +121,8 @@ render() {
                   </Card>
                 </Accordion>      
           </div>
-                <div className="FeaturedItems">
-                  <h3>FEATURED PRODUCTS</h3>
+                <div className="Items">
+                  <h3>Footwear</h3>
                     <Carousel>
                       <Carousel.Item>
                             <Card style={{ width: '18rem' }}>
@@ -128,7 +131,7 @@ render() {
                             <Card.Title>Item 1</Card.Title>
                             <Card.Text>
                             </Card.Text>
-                            <Button variant="primary"><span className="itemPrice">$235.00</span></Button>
+                            <Button className="AddButton" variant="primary">Add to Cart <span className="itemPrice">$235.00</span></Button>
                           </Card.Body>
                         </Card>
                       </Carousel.Item>
@@ -139,7 +142,7 @@ render() {
                             <Card.Title>Item 2</Card.Title>
                             <Card.Text>
                             </Card.Text>
-                            <Button variant="primary"><span className="itemPrice">$235.00</span></Button>
+                            <Button className="AddButton" variant="primary">Add to Cart <span className="itemPrice">$235.00</span></Button>
                           </Card.Body>
                         </Card>
                       </Carousel.Item>
@@ -150,56 +153,12 @@ render() {
                       <Card.Title>Item 3</Card.Title>
                       <Card.Text>
                       </Card.Text>
-                      <Button variant="primary"><span className="itemPrice">$235.00</span></Button>
+                      <Button className="AddButton" variant="primary">Add to Cart <span className="itemPrice">$235.00</span></Button>
                     </Card.Body>
                   </Card>
                       </Carousel.Item>
                     </Carousel>
-                 
-
-
                 </div>
-    <div className="LoginGrp">
-      
-        <Modal className="LoginModal" 
-        open={open} onClose={this.onCloseModal} center styles={'modal'}>
-            <Form className="loginForm">
-              <Form.Row>
-                <Form.Group  controlId="formGridEmail">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="Enter email" />
-                </Form.Group>
-                </Form.Row>
-                <Form.Row>
-                <Form.Group  controlId="formGridPassword">
-                  <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="Password" />
-                </Form.Group>
-              </Form.Row>
-
-              <Form.Group controlId="formGridAddress1">
-                <Form.Label>Address</Form.Label>
-                <Form.Control placeholder="1234 Main St" />
-              </Form.Group>
-
-              <Form.Group controlId="formGridAddress2">
-                <Form.Label>Address 2</Form.Label>
-                <Form.Control placeholder="Apartment, studio, or floor" />
-              </Form.Group>
-
-              <Form.Row>
-                <Form.Group controlId="formGridCity">
-                  <Form.Label>City</Form.Label>
-                  <Form.Control />
-                </Form.Group>
-              </Form.Row>
-
-              <Button variant="primary" type="submit">
-                Register
-              </Button>
-           </Form>
-        </Modal>
-        </div>        
       </div>
     </div>
   );
